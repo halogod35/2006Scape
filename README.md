@@ -34,7 +34,7 @@ services:
       - PGID=2006
       - TZ=Etc/UTC
     volumes:
-      - 2006scape-config:/2006Scape/2006Scape-Server/serverconfig.json:ro
+      - 2006scape-config:/2006Scape/2006Scape-Server/serverconfig.json
       - 2006scape-data:/2006Scape/2006Scape-Server/data/characters
     ports:
       - 43594:43594
