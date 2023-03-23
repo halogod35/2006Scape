@@ -28,24 +28,21 @@ services:
     image: registry.gitlab.com/2006-Scape/2006Scape
     container_name: 2006Scape-server
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=2006
+      - PGID=2006
       - TZ=Etc/UTC
-      - (anything in ServerConfig.json, examples are as follows)
-      - WEBSITE_LINK=https://yourmom.com # Optional
-      - WORLD_ID=2 # Optional
-      - MEMBERS_ONLY=TRUE # Optional
-      - MAX_PLAYERS=420 # Optional
     volumes:
       - 2006scape-config:/serverconfig.json:ro
       - 2006scape-data:/2006scape
       - 2006scape-saves:/2006Scape/2006Scape-Server/data/characters
     ports:
-      - 43594:43594 # Server (43598 for world 2)
-      - 43595-43596:43595-43596 # File Server
+      - 43594:43594 # Server
+      - 43595-43596:43595-43596
     restart: unless-stopped
-volumes: # If using volumes instead of binds
-  volume-name:
+volumes:
+  2006scape-data:
+  2006scape-config:
+  2006scape-saves:
 ```
 
 ### From the Command Line
