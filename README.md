@@ -21,7 +21,7 @@ To run 2006Scape on your docker server, simply run
 docker run -d -it -p 43594:43594 -p 43595-43596:43595-43596 2006-Scape/2006Scape
 ```
 #### Docker Compose
-```
+```docker
 version: "3"
 services:
   2006Scape-server:
